@@ -1,3 +1,5 @@
+const buttons = document.querySelectorAll("button");
+
 const rps = (playerChoice) => {
   const choices = ["Rock", "Paper", "Scissor"];
   let result = "";
@@ -10,19 +12,20 @@ const rps = (playerChoice) => {
   if (final_computer === final_playerchoice) result = "Draw";
   else {
     if (final_playerchoice === "Rock" && final_computer === "Paper")
-      result = "You Lose Computer picked " + final_computer;
+      result = "You Lose, computer picked " + final_computer;
     else if (final_playerchoice === "Scissor" && final_computer === "Rock")
-      result = "You Lose Computer picked " + final_computer;
+      result = "You Lose, computer picked " + final_computer;
     else if (final_playerchoice === "Paper" && final_computer === "Scissor")
-      result = "You Lose Computer picked " + final_computer;
+      result = "You Lose, computer picked " + final_computer;
     else {
-      result = "You win Computer picked " + final_computer;
+      result = "Congrants!!! you win, computer picked " + final_computer;
     }
   }
 
   return result;
 };
-
-for (let i = 0; i < 5; i++) {
-  console.log(rps("Paper"));
-}
+buttons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    alert(rps(button.value));
+  });
+});

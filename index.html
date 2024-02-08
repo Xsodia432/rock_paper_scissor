@@ -1,10 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="./rock_paper_scissor.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <div
+      class="h-screen max-h-screen bg-gradient-to-r from-cyan-900 to-blue-900 font-sans flex flex-row"
+    >
+      <div class="basis-1/4"></div>
+      <div
+        class="bg-gradient-to-r from-cyan-400 to-cyan-500 grid basis-1/2 max-h-64 mt-20 rounded drop-shadow-lg pt-2"
+      >
+        <div class="text-center">
+          <div class="font-bold text-white text-4xl">
+            Rock Paper and Scissor
+          </div>
+          <div class="text-slate-600 text-md italic">
+            Play rock paper and scissor with computer
+          </div>
+        </div>
+
+        <div class="flex justify-center gap-10">
+          <button
+            class="w-48 font-bold rounded bg-blue-500 transition duration-150 ease-in-out text-white hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-200"
+            value="Rock"
+          >
+            Rock
+          </button>
+          <button
+            class="w-48 font-bold rounded bg-blue-500 transition duration-150 ease-in-out text-white hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-200"
+            value="Paper"
+          >
+            Paper
+          </button>
+          <button
+            class="w-48 font-bold rounded bg-blue-500 transition duration-150 ease-in-out text-white hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-200"
+            value="Scissor"
+          >
+            Scissor
+          </button>
+        </div>
+        <div class="basis-1/4"></div>
+      </div>
+    </div>
+  </body>
 </html>
+<script src="./rock_paper_scissor.js"></script>
